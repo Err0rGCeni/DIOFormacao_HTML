@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantica</title>
+    <style>
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li a {
+            padding: 10px 15px;
+            color: blue;
+            text-decoration: none;
+            border-radius: 15px 5px;
+        }
+        nav ul li a:hover {
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">L1</a></li>
+                <li><a href="">L2</a></li>
+                <li><a href="">L3</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section></section>
+        <section></section>
+        <section></section>
+
+        <aside></aside>
+        <!--Ferramentas de busca identificam hierarquia entre articles-->
+        <article>
+            <p>Qual?</p>
+            <article>
+                <p>Legume</p>
+            </article>
+        </article>
+
+        <article>
+            <h1>Descoberta</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique culpa totam earum repellat officia doloribus, repellendus est, soluta animi fuga laborum quia, suscipit perspiciatis cupiditate distinctio sunt sequi cumque id.</p>
+            <p>Publicado em <time pubdate>01/01/2001</time></p>
+            <blockquote cite="https://www.google.com/">
+                Lorem: importa!
+            </blockquote>
+            <p>Aranha <q citie="https://developer.mozilla.org/pt-BR/">arranha a rã</q>.</p>
+        </article>
+
+        <figure>
+            <img src="#" alt="erro">
+            <figcaption>Uma img a não ser exibida</figcaption>
+        </figure>
+
+        <picture>
+            <source srcset="#-small" media="(min-width: 600px)" alt="picture pequena" alt>
+            <img src="#" alt="padrão">
+
+        </picture>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

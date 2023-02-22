@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <h1>Trabalhando com Formulários</h1>
+
+    <div>
+        <h2>Elemento Form</h2>
+        <form
+        name="signup"
+        target="_blank"
+        method="POST"
+        action="#"
+        autocomplete="of"
+        onsubmit="alert('submitado!')"
+        >
+            Nome: <input type="text" name="name" /> <br>
+            Idade: <input type="number" name="age" /> <br>
+            Senha: <input type="password" name="password" /> <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Tipos de Inputs</h2>
+        <form action="#" name="testandoInputs">
+            <label>Text: <input type="text"></label><br>
+            <label>Number: <input type="number" min="0" step="5" max="50"></label><br>
+            <label>Button: <input type="button" value="Enviar"></label><br>
+            <label>Range: <input type="range" min="0" max="100" value="10" step="10"></label><br>
+            <label>Color: <input type="color" ></label><br>
+            <!-- Email possui uma validação pelo próprio navegador -->
+            <label>Email: <input type="email" ></label><br>
+            <label>Url: <input type="url" ></label><br>
+            <label>Date: <input type="date" ></label><br>
+            <label>Checkbox: <input type="checkbox" ></label><br>
+            <label>Radio: <input type="radio" ></label><br>
+            <label>Hidden: <input type="hidden" ></label><br>
+            <label>File: <input type="file" ></label><br>
+            <label>Search: <input type="search" ></label><br>
+            <!-- Não funcionam no firefox -->
+            <label>Week: <input type="week" ></label><br>
+            <label>Month: <input type="month" ></label><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Checkbox e Radio</h2>
+        <form method="post">
+            <h3>Pizza</h3>
+            <p>Opcionais:</p>
+            <input type="checkbox" name="opcionais[]" value="queijo">+ Queijo<br>
+            <input type="checkbox" name="opcionais[]" value="calabresa" disabled>+ Calabresa<br>
+            <input type="checkbox" name="opcionais[]" value="cebola">+ Cebola<br>
+            <input type="checkbox" name="opcionais[]" value="azeitona">+ Azeitona<br>
+            <p>Borda Recheada:</p>
+            <input type="radio" name="borda" value="sim">Sim<br>
+            <input type="radio" name="borda" value="nao">Não<br>
+            <p>Bebida:</p>
+            <input type="radio" name="bebida" value="agua">Água<br>
+            <input type="radio" name="bebida" value="suco">Suco<br>
+            <input type="radio" name="bebida" value="refrigerante">Refrigerante<br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h2>Tipos de Button, Select e Textarea</h2>
+        <form action="" method="get">
+            <label>Nome:<input type="text" name="name"></label><br>
+            <label>Idade:<input type="number" name="age"></label><br>
+            <label>Cargo:</label>
+            <select name="role">
+                <option value="">Selecione</option>
+                <option value="user">Usuário</option>
+                <option value="mod">Moderador</option>
+                <option value="admin">Administrador</option>
+            </select>
+            <br>
+            <label>Mensagem:</label>
+            <textarea name="Message">
+
+            </textarea>
+            <br>
+            <label>Password:<input type="password" name="password"></label><br>
+            <button type="button" onclick="alert('clicou')">Clicável</button>
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+            <button disabled="disabled">Desabilitado</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

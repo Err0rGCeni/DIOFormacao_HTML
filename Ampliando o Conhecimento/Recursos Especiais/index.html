@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Especiais</title>
+    <style>
+        kbd {
+            border: solid 1px black;
+        }
+        code {
+            background-color: black;
+            color: lime;
+        }
+        pre {
+            background-color: #f1f1f1;
+        }
+        pre > code {
+            color: red;
+        }
+        pre > p {
+            font-style: italic;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="search" name="search" list="browsers">
+        <datalist id="browsers">
+            <option value="chrome">Google Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="edge">Edge</option>
+            <option value="safari">Safari</option>
+            <option value="opera">Opera</option>
+        </datalist>
+    </div>
+
+    <hr>
+
+    <div>
+        <select name="browsers">
+            <option value="">Selecione um navegador</option>
+            <option value="chrome">Google Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="edge">Edge</option>
+            <option value="safari">Safari</option>
+            <option value="opera">Opera</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <div>
+        <p>kbd: <kbd>CTRL</kbd> + <kbd>C</kbd>!</p>
+        <p>code: <code>background-color</code></p>
+        <p>pre:</p>
+        <pre>
+            <p>// Isto é um comentário</p>
+            <code>
+                code {
+                    background-color: black;
+                    color: lime;
+                }
+            </code>
+        </pre>
+    </div>
+
+    <hr>
+
+    <div>
+        <details >
+            <summary>Clique para abrir o details!</summary>
+            <p>Para executar isto, faça aquilo!</p>
+        </details>
+    </div>
+
+    <hr>
+
+    <div>
+        <meter max="100" min="0" value="25">
+        </meter>
+        <progress max="100" min="0" value="0" id="progress">
+        </progress>
+        <script>
+            var progress = document.getElementById('progress');
+            const interval = setInterval(() => {
+                progress.value += 10;
+                if (progress >= 100) {
+                    clearInterval(interval);
+                }
+            }, 100);
+        </script>
+    </div>
+
+    <hr>
+
+    <div>
+        <input type="text" id="busca"><br>
+        <p id="descricao">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus similique natus, enim eligendi soluta distinctio, tempora saepe neque excepturi ipsa rerum cumque perferendis repellat esse? Delectus dicta adipisci nam.            
+        </p>
+        <script>
+            var searchField = document.getElementById('busca');
+            var descricaoObj = document.getElementById('descricao');
+            var textToSearch = descricaoObj.innerHTML;
+
+            function realizarBusca(busca) {
+                const regex = new RegExp(`(${busca})(?!(.(?!<mark))*</mark>)+`, 'ig');
+                const ocurrences = textToSearch.match(regex);
+                descricaoObj.innerHTML = textToSearch.replace(regex, `<mark>${busca}</mark>`);
+            }
+
+            searchField.addEventListener('keyup', (e) => realizarBusca(e.target.value));
+        </script>
+    </div>
+
+    <hr>
+    
+
+    
+</body>
+</html>
